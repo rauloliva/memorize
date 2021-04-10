@@ -1,6 +1,6 @@
 {
   "name": "memorize",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
@@ -15,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass": "node-sass src/resources/sass/app.scss src/resources/app.css"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +36,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "keywords": [
+    "memorize",
+    "flip",
+    "cards",
+    "cards"
+  ],
+  "author": "Raul Oliva",
+  "license": "ISC"
 }
