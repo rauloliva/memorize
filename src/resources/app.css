@@ -1,3 +1,56 @@
-.body {
-  background-color: aquamarine;
-  width: 400px; }
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.button {
+  background: #F2D30C;
+  font-size: 1.4rem;
+  border: none;
+  box-shadow: 3px 4px 2px 0 black;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  padding: 3px 8px; }
+  .button:active, .button:visited {
+    background: #c9b010;
+    box-shadow: 3px 4px 5px 0 black; }
+
+.icon {
+  font-size: 1.4rem;
+  margin: 0 8px; }
+
+.container {
+  background: #512DC8;
+  width: 100%;
+  height: 45vh;
+  box-shadow: 3px 5px 3px 0 #4e4e4e;
+  display: grid;
+  grid-template-columns: 40% 25% 40%;
+  align-items: center;
+  justify-items: center; }
+  .container__button {
+    grid-area: 1 / 3;
+    justify-self: left; }
+    .container__button * {
+      font-size: 1.7rem; }
+  .container__title-box {
+    justify-self: right; }
+  .container__title {
+    color: white;
+    font-size: 5.3rem;
+    text-shadow: 2px 3px 2px black;
+    display: block;
+    text-align: center; }
+  .container__subtitle {
+    color: white;
+    font-size: 2.4rem;
+    text-shadow: 2px 3px 2px black;
+    display: block;
+    text-align: center; }
+  .container__card {
+    box-shadow: 3px 5px 3px 0 black;
+    transform: rotate(-15deg); }

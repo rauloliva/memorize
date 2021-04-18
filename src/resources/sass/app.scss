@@ -1,4 +1,5 @@
-.body {
-    background-color: aquamarine;
-    width: 400px;
-}
+@import "base.scss";
+@import "variables.scss";
+@import "UI/button.scss";
+@import "UI/icon.scss";
+@import "UI/HomePage/container.scss";
