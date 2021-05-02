@@ -23,7 +23,7 @@ body {
   font-size: 1.4rem;
   margin: 0 8px; }
 
-.container {
+.mainSection {
   background: #512DC8;
   width: 100%;
   height: 45vh;
@@ -32,25 +32,199 @@ body {
   grid-template-columns: 40% 25% 40%;
   align-items: center;
   justify-items: center; }
-  .container__button {
+  @media screen and (max-width: 1350px) {
+    .mainSection {
+      grid-template-columns: 45% 15% 45%; } }
+  @media screen and (max-width: 1000px) {
+    .mainSection {
+      grid-template-columns: 65% 35%;
+      height: 23vh; } }
+  .mainSection__button {
     grid-area: 1 / 3;
     justify-self: left; }
-    .container__button * {
+    @media screen and (max-width: 1500px) {
+      .mainSection__button {
+        justify-self: center; } }
+    @media screen and (max-width: 1000px) {
+      .mainSection__button {
+        grid-area: 2 / 1;
+        grid-column: 1 / -1; } }
+    .mainSection__button * {
       font-size: 1.7rem; }
-  .container__title-box {
+      @media screen and (max-width: 1000px) {
+        .mainSection__button * {
+          font-size: 1.5rem; } }
+  .mainSection__title-box {
     justify-self: right; }
-  .container__title {
+    @media screen and (max-width: 1350px) {
+      .mainSection__title-box {
+        justify-self: center; } }
+  .mainSection__title {
     color: white;
     font-size: 5.3rem;
     text-shadow: 2px 3px 2px black;
     display: block;
     text-align: center; }
-  .container__subtitle {
+    @media screen and (max-width: 1350px) {
+      .mainSection__title {
+        font-size: 4.5rem; } }
+    @media screen and (max-width: 1000px) {
+      .mainSection__title {
+        font-size: 4rem; } }
+  .mainSection__subtitle {
     color: white;
     font-size: 2.4rem;
     text-shadow: 2px 3px 2px black;
     display: block;
     text-align: center; }
-  .container__card {
+    @media screen and (max-width: 1350px) {
+      .mainSection__subtitle {
+        font-size: 1.8rem; } }
+    @media screen and (max-width: 1000px) {
+      .mainSection__subtitle {
+        font-size: 1.3rem; } }
+  .mainSection__card {
     box-shadow: 3px 5px 3px 0 black;
+    transform: rotate(-15deg);
+    animation: rotate 4s infinite 1s; }
+    @media screen and (max-width: 1350px) {
+      .mainSection__card {
+        width: 150px;
+        height: 250px; } }
+    @media screen and (max-width: 1000px) {
+      .mainSection__card {
+        width: 75px;
+        height: 130px;
+        padding-top: 5px; } }
+
+@keyframes rotate {
+  0% {
     transform: rotate(-15deg); }
+  50% {
+    transform: rotate(15deg); }
+  100% {
+    transform: rotate(-15deg); } }
+
+.navigation {
+  padding: 1.2rem; }
+  @media screen and (max-width: 1000px) {
+    .navigation {
+      padding: .7rem; } }
+  .navigation__nav {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 6rem;
+    justify-content: center; }
+    @media screen and (max-width: 1000px) {
+      .navigation__nav {
+        grid-column-gap: 4rem; } }
+    .navigation__nav a {
+      color: black;
+      text-decoration: none;
+      font-size: 1.8rem; }
+      @media screen and (max-width: 1000px) {
+        .navigation__nav a {
+          font-size: 1.5rem; } }
+      .navigation__nav a:hover {
+        color: #512DC8; }
+
+.howToPlay {
+  display: grid;
+  grid-template-columns: 40% 60%; }
+  @media screen and (max-width: 1000px) {
+    .howToPlay {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(2, auto); } }
+  .howToPlay__imageBox {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 23% 35%;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem 0; }
+    @media screen and (max-width: 1000px) {
+      .howToPlay__imageBox {
+        padding: 2rem 0;
+        grid-template-columns: 20% 48%;
+        justify-content: right; } }
+    .howToPlay__imageBox img {
+      transform: rotate(-15deg);
+      animation: upAndDown 2.5s infinite; }
+      @media screen and (max-width: 1000px) {
+        .howToPlay__imageBox img {
+          height: 22vh; } }
+  .howToPlay__textBox {
+    padding: 4rem; }
+    @media screen and (max-width: 1000px) {
+      .howToPlay__textBox {
+        padding: .5rem 3rem; } }
+    .howToPlay__textBox p {
+      font-size: 1.7rem; }
+      @media screen and (max-width: 1000px) {
+        .howToPlay__textBox p {
+          font-size: 1.4rem; } }
+
+@keyframes upAndDown {
+  0% {
+    box-shadow: none; }
+  50% {
+    box-shadow: 5px 10px 8px 0 black; }
+  100% {
+    box-shadow: none; } }
+
+.highScores {
+  display: grid;
+  grid-template-columns: 60% 40%; }
+  .highScores__chartBox {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem 0; }
+  .highScores__table {
+    display: table;
+    border-spacing: 3px;
+    width: 30vw;
+    font-size: 1.4rem;
+    text-align: center; }
+    .highScores__table th, .highScores__table td {
+      padding: 5px; }
+    .highScores__table td {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black; }
+  .highScores__imageBox {
+    padding: 4rem; }
+
+.contact {
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+  padding: 1rem; }
+  .contact__box {
+    grid-area: 1 / 2;
+    font-size: 1.6rem;
+    justify-content: center; }
+  .contact__imageBox {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-bottom: 5px; }
+  .contact__image {
+    width: 80px;
+    height: 70px; }
+
+.section {
+  background: #512DC8;
+  color: white;
+  text-shadow: 2px 3px 2px black;
+  display: block;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 5px 0; }
+  @media screen and (max-width: 1000px) {
+    .section {
+      font-size: 2rem; } }
+
+.footer {
+  background: #512DC8;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 3rem 0; }

@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Container = props => (
-    <div className='container'>
-        {props.children}
+    <div className='mainSection'>
+        { props.children }
     </div>
 )
 

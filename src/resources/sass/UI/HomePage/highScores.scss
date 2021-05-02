@@ -1,0 +1,33 @@
+.highScores {
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    &__chartBox {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        padding: 3rem 0;
+    }
+
+    &__table {
+        display: table;
+        // border: 2px solid black;
+        border-spacing: 3px;
+        width: 30vw;
+        font-size: 1.4rem;
+        text-align: center;
+
+        & th, td {
+            padding: 5px;
+        }
+
+        td {
+            border-bottom: 2px solid black;
+            border-right: 2px solid black;
+        }
+    }
+
+    &__imageBox {
+        padding: 4rem;
+    }
+}

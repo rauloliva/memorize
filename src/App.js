@@ -4,9 +4,9 @@ import HomePage from './UI/HomePage/HomePage'
 
 const App = () => {
   return (
-    <React.StrictMode>
+    <React.Fragment>
       <HomePage />
-    </React.StrictMode>
+    </React.Fragment>
   )
 }
 
