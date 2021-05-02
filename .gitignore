@@ -22,3 +22,7 @@ yarn-error.log*
 
 # development
 src/resources/sass
+*.log
+
+# vscode config
+/.vscode

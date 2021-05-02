@@ -1,0 +1,15 @@
+.button {
+    background: $color-yellow;
+    font-size: 1.4rem;
+    border: none;
+    box-shadow: 3px 4px 2px 0 black;
+    cursor: pointer;
+    outline: none;
+    display: block;
+    padding: 3px 8px;
+
+    &:active, &:visited {
+        background: $color-yellow-darker;
+        box-shadow: 3px 4px 5px 0 black;
+    }
+}

@@ -1,11 +1,13 @@
+import React from 'react'
 import './resources/app.css'
+import HomePage from './UI/HomePage/HomePage'
 
-function App() {
+const App = () => {
   return (
-    <div className="body">
-      Memorize
-    </div>
-  );
+    <React.Fragment>
+      <HomePage />
+    </React.Fragment>
+  )
 }
 
 export default App;
